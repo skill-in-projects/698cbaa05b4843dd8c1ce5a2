@@ -1,4 +1,6 @@
-/* Global Styles */
+/* Global Styles – uses design tokens from foundations.css */
+@import url("foundations.css");
+
 * {
     margin: 0;
     padding: 0;
@@ -6,55 +8,55 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    font-family: var(--font-family-sans);
+    line-height: var(--leading-normal);
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
 .container {
-    max-width: 1200px;
+    max-width: var(--container-max);
     margin: 0 auto;
-    padding: 20px;
+    padding: var(--space-5);
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #667eea;
-    color: white;
+    padding: var(--space-2) var(--space-5);
+    background-color: var(--color-primary);
+    color: var(--color-surface);
     border: none;
-    border-radius: 5px;
+    border-radius: var(--radius-sm);
     cursor: pointer;
-    font-size: 16px;
+    font-size: var(--text-base);
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #5568d3;
+    background-color: var(--color-primary-hover);
 }
 
 button:disabled {
-    background-color: #ccc;
+    background-color: var(--color-neutral-300);
     cursor: not-allowed;
 }
 
 #response {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 5px;
+    margin-top: var(--space-5);
+    padding: var(--space-4);
+    border-radius: var(--radius-sm);
     display: none;
 }
 
 #response.success {
-    background-color: #d4edda;
-    border: 1px solid #c3e6cb;
-    color: #155724;
+    background-color: var(--color-success-bg);
+    border: 1px solid var(--color-success-border);
+    color: var(--color-success-text);
     display: block;
 }
 
 #response.error {
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
-    color: #721c24;
+    background-color: var(--color-error-bg);
+    border: 1px solid var(--color-error-border);
+    color: var(--color-error-text);
     display: block;
 }

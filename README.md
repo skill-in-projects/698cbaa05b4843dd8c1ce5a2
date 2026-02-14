@@ -11,7 +11,8 @@
 ## Project Structure
 
 - `index.html` - Main landing page
+- `foundations.css` - Design tokens (colors, typography, spacing)
+- `style.css` - Global styles
 - `config.js` - API configuration
-- `style.css` - Styling
 
   > Health check: clone and push verified.
