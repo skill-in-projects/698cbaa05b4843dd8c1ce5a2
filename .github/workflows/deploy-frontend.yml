@@ -8,6 +8,7 @@ on:
       - 'index.html'
       - 'config.js'
       - 'style.css'
+      - 'foundations.css'
       - 'frontend/**'
       - '.github/workflows/deploy-frontend.yml'
   workflow_dispatch:
