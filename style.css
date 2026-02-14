@@ -1,6 +1,8 @@
 /* Global Styles – uses design tokens from foundations.css */
 @import url("foundations.css");
 
+/* Property order: box model → typography → visual (color, border, etc.) → other */
+
 * {
     margin: 0;
     padding: 0;
@@ -22,12 +24,12 @@ body {
 
 button {
     padding: var(--space-2) var(--space-5);
-    background-color: var(--color-primary);
-    color: var(--color-surface);
     border: none;
     border-radius: var(--radius-sm);
-    cursor: pointer;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
     font-size: var(--text-base);
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
@@ -41,22 +43,22 @@ button:disabled {
 }
 
 #response {
+    display: none;
     margin-top: var(--space-5);
     padding: var(--space-4);
     border-radius: var(--radius-sm);
-    display: none;
 }
 
 #response.success {
-    background-color: var(--color-success-bg);
-    border: 1px solid var(--color-success-border);
-    color: var(--color-success-text);
     display: block;
+    border: var(--border-width-thin) solid var(--color-success-border);
+    background-color: var(--color-success-bg);
+    color: var(--color-success-text);
 }
 
 #response.error {
-    background-color: var(--color-error-bg);
-    border: 1px solid var(--color-error-border);
-    color: var(--color-error-text);
     display: block;
+    border: var(--border-width-thin) solid var(--color-error-border);
+    background-color: var(--color-error-bg);
+    color: var(--color-error-text);
 }
