@@ -14,3 +14,4 @@
 - `config.js` - API configuration
 - `style.css` - Styling
 
+  > Health check: clone and push verified.
